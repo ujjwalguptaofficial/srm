@@ -37,7 +37,7 @@ function checkSRM(observed, expected) {
       chrome.runtime.sendMessage({srmStatus: 'SRM'});
     }
   } else {
-    platforms[platform].unflagSRM();
+    platforms[platform].unflagSRM(pval);
     if (chrome.runtime) {
       chrome.runtime.sendMessage({srmStatus: 'OK'});
     }
